@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesmerizing Login Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Georgia', serif;
+            background-color: #f0f0f0;
+        }
+
+        .login-page {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        /* Adding the background image */
+        .background-image {
+            background-image: url('https://indotoursadventures.com/public/storage/blogs/d06281782db28c31b473731f48c174f1.jpg');
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            filter: blur(8px);
+            z-index: -1;
+        }
+
+        /* Adding fade-in animation for the login box */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Making the login box larger and adding more blur */
+        .login-box {
+            background-color: rgba(255, 255, 255, 0.4); /* More transparent white box */
+            padding: 60px 50px; /* Larger padding */
+            width: 450px; /* Wider login box */
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            backdrop-filter: blur(15px); /* Blur effect applied to the box */
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #5b4515;
+            font-style: italic;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .login-form input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .login-form input:focus {
+            border-color: #d4af37;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            outline: none;
+        }
+
+        .login-form button {
+            width: 100%;
+            padding: 12px;
+            background-color: #d4af37;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-form button:hover {
+            background-color: #b18d29;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-links {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .login-links a {
+            color: #5b4515;
+            font-size: 14px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .login-links a:hover {
+            text-decoration: underline;
+            color: #d4af37;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-page">
+        <div class="background-image"></div> <!-- Background image applied here -->
+        <div class="login-box">
+            <h2>Explore India's Rich Heritage</h2>
+            <form class="login-form">
+                <input type="email" placeholder="Email Address">
+                <input type="password" placeholder="Password">
+                <button type="submit">Login</button>
+            </form>
+            <div class="login-links">
+                <a href="#">Don’t have an account? Sign Up</a>
+                <a href="#">Forgot Password?</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
